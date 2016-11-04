@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="author" content="Mihail Todorov">
+    <meta name="description" content="Registration Popup">
+    <title>Registration Form</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="register" class="popup">
+      <div class="window-popup">
+        <form>
+          <h1>Създайте своя профил</h1>
+          <P>Всички полета, отбелязани със звезда ( <span style='color:red;'>*</span> ) са задължителни за попълване!</P>
+          <input type="text" placeholder="Име*">
+          <input type="text" placeholder="Фамилия*">
+          <div class="gender">Пол<span style='color:red;'>*</span>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Мъж</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Жена</label>
+          </div>
+          <input type="email" placeholder="E-mail*">
+          <input type="password" placeholder="Парола*">
+          <input type="password" placeholder="Потвърдете Паролата*">
+          <div class="subscribe">
+            <input type="checkbox" name="subscribe" value="subscribe" id="subscribe">
+            <label for="subscribe">Абонирайте се за бюлетин</label>
+          </div>
+          <div class="agree">
+            <input type="checkbox" name="agree" value="agree" id="agree">
+            <label for="agree">Съгласен съм с <a href='#' style='text-decoration:underline;color:#161616;font-weight:600'>общите условия</a></label>
+          </div>
+          <input type="submit" value="Регистрация"><img src="img/reg-image.png" width="384px" height="100%">
+        </form>
+<img src="img/close.png" width="30px" height="30px" class="close">
+        <div class="client-text">
+          <div class="list">
+            <ul>
+              <li>
+                <h2>Присъединете се и Вие в клуба</h2>
+              </li>
+              <li>Нови колекции всеки ден</li>
+              <li>Отстъпки до 80%</li>
+              <li>Безплатна регистрация</li>
+              <li>Комплимент при първа покупка</li>
+              <li>Бъди специален клиент</li>
+            </ul>
+          </div>
+          <div class="tool-tip">
+            <ul>
+              <li>
+                <h4>Специалните клиенти получават:</h4>
+              </li>
+              <li>Още -30% от нашия outlet;</li>
+              <li>Безплатна доставка при поръчки над 80 лв.;</li>
+              <li>Допълнителни отстъпки при поръчка над 200 лв., 300 лв., 400 лв.;</li>
+              <li>Възможност да пазаруват 24 ч. преди официалната премиера на всяка нова колекция и да се възползват първи от ограничените количества и разпродажби;</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="js/drop-down.js"></script>
+  <script src="js/popups.js"></script>
+</html>

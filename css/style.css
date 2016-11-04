@@ -1,0 +1,332 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 12px;
+  background-color: #FFF;
+}
+
+.clearfix {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+.popup {
+  background-color: rgba(102, 102, 102, 0.9);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.popup .window-popup {
+  position: absolute;
+  top: 118px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 792px;
+  margin: 0 auto;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 20px solid #FFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+}
+
+@media screen and (max-width: 792px) {
+  .popup .window-popup {
+    border: none;
+    width: 100%;
+    overflow-y: scroll;
+  }
+}
+
+.popup .window-popup form {
+  width: 310px;
+  padding-left: 28px;
+  padding-top: 30px;
+}
+
+.popup .window-popup form h1 {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.popup .window-popup form p {
+  padding: 14px 0;
+  color: #666666;
+}
+
+.popup .window-popup form input {
+  width: 100%;
+  height: 50px;
+  margin: 5px 0;
+  color: #161616;
+  padding: 16px;
+  padding-right: 0;
+  box-sizing: border-box;
+  border: 1px solid #d2d2d2;
+}
+
+.popup .window-popup form input:focus {
+  color: #d2d2d2;
+  border-color: red;
+}
+
+.popup .window-popup form input[type='submit'] {
+  margin-top: 14px;
+  background-color: #161616;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.popup .window-popup img.close {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 842px) {
+  .popup .window-popup img.close {
+    top: 0;
+    right: 0;
+    background-color: #161616;
+  }
+}
+
+#register {
+  display: none;
+}
+
+#register .window-popup {
+  top: 59px;
+  height: 603px;
+  background-image: url("../img/sign-up.png");
+}
+
+#register .window-popup p {
+  padding: 12px 0;
+}
+
+#register .window-popup .gender {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 115px;
+  margin: 11px 28px;
+  font-size: 13px;
+}
+
+#register .window-popup .gender input[type=radio] {
+  height: 10px;
+  background-color: #d2d2d2;
+  margin-left: 13px;
+}
+
+#register .window-popup .gender label {
+  padding-left: 5px;
+}
+
+#register .window-popup input[type=checkbox] {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+#register .window-popup .subscribe {
+  margin-top: 9px;
+}
+
+#register .window-popup .subscribe, #register .window-popup .agree {
+  text-align: left;
+}
+
+#register .window-popup .subscribe label, #register .window-popup .agree label {
+  text-align: left;
+  width: 197px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#register .window-popup input[type=submit] {
+  z-index: 500;
+  position: relative;
+}
+
+#register .window-popup form img {
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 250;
+}
+
+@media screen and (max-width: 792px) {
+  #register .window-popup form img {
+    display: none;
+  }
+}
+
+#register .window-popup .client-text {
+  margin-bottom: 11px;
+  position: absolute;
+  top: 156px;
+  right: 11px;
+  text-align: left;
+}
+
+@media screen and (max-width: 792px) {
+  #register .window-popup .client-text {
+    position: static;
+    padding: 10px;
+  }
+}
+
+#register .window-popup .client-text .list ul {
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+#register .window-popup .client-text .list ul li {
+  padding-bottom: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: -5px;
+  cursor: pointer;
+  color: #666666;
+}
+
+#register .window-popup .client-text .list ul li:first-of-type {
+  padding: 0 0 14px 0;
+  cursor: default;
+  color: #161616;
+}
+
+#register .window-popup .client-text .list ul li:nth-of-type(2)::before {
+  content: url("../img/client-tag.png");
+  height: 32px;
+  width: 32px;
+}
+
+#register .window-popup .client-text .list ul li:nth-of-type(3)::before {
+  content: url("../img/client-percent.png");
+  height: 32px;
+  width: 32px;
+}
+
+#register .window-popup .client-text .list ul li:nth-of-type(4)::before {
+  content: url("../img/client-lock.png");
+  height: 32px;
+  width: 32px;
+}
+
+#register .window-popup .client-text .list ul li:nth-of-type(5)::before {
+  content: url("../img/client-gift.png");
+  height: 32px;
+  width: 32px;
+}
+
+#register .window-popup .client-text .list ul li:nth-of-type(6)::before {
+  content: url("../img/client-crown.png");
+  height: 32px;
+  width: 32px;
+}
+
+#register .window-popup .client-text .list ul li:nth-of-type(6).clicked {
+  color: #161616;
+}
+
+#register .window-popup .client-text .list ul li:hover {
+  color: #161616;
+}
+
+#register .window-popup .client-text .list ul h2 {
+  font-size: 16px;
+}
+
+#register .window-popup .client-text .tool-tip {
+  background-color: #eee;
+}
+
+#register .window-popup .client-text .tool-tip ul {
+  width: 252px;
+  height: 202px;
+  list-style: none;
+  position: relative;
+  display: none;
+}
+
+#register .window-popup .client-text .tool-tip ul::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  border-bottom: 15px solid #eee;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  box-sizing: border-box;
+}
+
+#register .window-popup .client-text .tool-tip ul li {
+  padding: 5px 5px 5px 20px;
+  font-size: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #666666;
+}
+
+#register .window-popup .client-text .tool-tip ul li::before {
+  content: url("../img/check.png");
+  height: 14px;
+  width: 14px;
+  padding-right: 8px;
+  display: block;
+}
+
+#register .window-popup .client-text .tool-tip ul li:first-of-type {
+  font-size: 11px;
+  margin-left: -20px;
+  color: #161616;
+}
+
+#register .window-popup .client-text .tool-tip ul li:first-of-type::before {
+  content: "";
+}
